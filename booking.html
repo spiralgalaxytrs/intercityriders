@@ -440,10 +440,28 @@
                 window.open('#', '_self'); */
                 window.open('https://intercityriders.com/bookingSuccess.html', '_blank');
   
-           var xhttp = new XMLHttpRequest();
+          /* var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://intercityriders.com%0AContact No: 9944942223%0AHello "+strText+",%0AThank you for Booking with intercityriders.%0AYour Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1", true);
-  xhttp.send();
+  xhttp.send();*/
                         
+		    
+var index = ["https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://intercityriders.com%0AContact No: 9944942223%0AHello "+strText+",%0AThank you for Booking with intercityriders.%0AYour Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1", 'https://api.telegram.org/bot1277549383:AAGnKv4XGhOAG08Qg7ewe1mLVyXFiISPJ8o/sendMessage?chat_id=-1001479118068&text='+result];
+
+var request = new XMLHttpRequest();
+
+for (var i = 0; i < index.length; i++) {
+
+    var url = index[i];
+
+    request.open("GET", url);
+    request.onload = function() {
+        var data = JSON.parse(request.responseText);
+        console.log(data);
+    }
+    request.send();
+}
+		    
+		    
             }
 
         });
