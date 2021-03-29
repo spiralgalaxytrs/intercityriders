@@ -26,6 +26,8 @@ var suvr;
 
 // Define calcRoute function
 function calcRoute() {
+     var y = document.getElementById("ma");
+        y.style.display = "block";
     //create request
     var request = {
         origin: document.getElementById("location-1").value,
@@ -46,8 +48,7 @@ function calcRoute() {
             suvo=((n*16)+350)+" - "+((n*16)+500);
             suvr=2*((n*16)+350)+" - "+2*((n*16)+500);
             traveller=(2*((n*18)+350))+" - "+(2*((n*18)+500));
-            var y = document.getElementById("ma");
-        y.style.display = "block";}
+           
           //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
             $("#output1").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way Price  : <br>₹" +sedano+"</span><br /><span> Round Way Price  : <br>₹" +sedanr+"</span></div>");
