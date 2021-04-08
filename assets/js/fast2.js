@@ -37,7 +37,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
             var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://intercityriders.com/%0AContact No: 9944942223%0AHello "+strText+",%0AThank you for Booking with intercityriders.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1);
 		//var wnd1=location.replace("bc.html","_self ");		      
                               if(wnd){
-                                      setTimeout(function () { wnd.close();}, 1800);
+                                      setTimeout(function () { wnd.close();}, 2000);
 				      
                               }
 		//setTimeout(function () { wnd.open();}, 2100);
