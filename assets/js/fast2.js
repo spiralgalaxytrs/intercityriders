@@ -33,6 +33,7 @@ function testVariable() {
 
 var finalMsg = encodeURI(result);
          document.getElementById("bookingForm").addEventListener("submit", (e) => {
+		 testVariable();
 e.preventDefault();
 if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6=="")
         {
