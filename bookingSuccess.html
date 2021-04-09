@@ -298,7 +298,7 @@ font-family: 'Poppins', sans-serif;">Booking Success!</h2>
 
     <script>
     console.log(localStorage.getItem("result"));
-    document.getElementById("list").innerHTML =result;
+    document.getElementById("list").innerHTML =localStorage.getItem("result");
     localStorage.removeItem("result");
     </script>   
        
