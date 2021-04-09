@@ -1,5 +1,5 @@
 function testVariable() {
-	clearRoute();
+	
     var strText = document.getElementById("name").value;
     var strText1 = document.getElementById("p").value;
     var strText2 = document.getElementById("location-1").value;
@@ -12,6 +12,7 @@ function testVariable() {
 	var Clink="https://intercityriders.com";
 	var CPh="9944942223";
 	var Cname="intercityriders";
+	clearRoute();
     if((strText7=="Sedan") && (strText8=="One-Way"))
     {rate=sedano;}
     else if((strText7=="Sedan") && (strText8="Round"))
