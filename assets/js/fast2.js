@@ -172,7 +172,11 @@ function calcRoute() {
             directionsDisplay.setDirections(result);
             
 
-
+		localStorage.setItem("rate1", sedano);
+		localStorage.setItem("rate2", sedanr);
+		localStorage.setItem("rate3", suvo);
+		localStorage.setItem("rate4", suvr);
+		localStorage.setItem("rate5", traveller);
 
         } else {
             //delete route from map
