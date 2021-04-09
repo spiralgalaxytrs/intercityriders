@@ -12,7 +12,7 @@ function testVariable() {
 	var Clink="https://intercityriders.com";
 	var CPh="9944942223";
 	var Cname="intercityriders";
-	clearRoute();
+	calcRoute()
     if((strText7=="Sedan") && (strText8=="One-Way"))
     {rate=sedano;}
     else if((strText7=="Sedan") && (strText8="Round"))
