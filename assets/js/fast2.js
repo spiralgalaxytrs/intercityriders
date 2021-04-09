@@ -1,3 +1,8 @@
+var sedano;
+var sedanr;
+var suvo; 
+var suvr;
+ var rate;
 function testVariable() {
 	
     var strText = document.getElementById("name").value;
@@ -8,7 +13,7 @@ function testVariable() {
     var strText6 = document.getElementById("pickuptime").value;
     var strText7 = document.getElementById("cars").value;
     var strText8 = document.getElementById("ser").value;
-    var rate;
+   
 	var Clink="https://intercityriders.com";
 	var CPh="9944942223";
 	var Cname="intercityriders";
@@ -126,10 +131,7 @@ var directionsDisplay = new google.maps.DirectionsRenderer();
 
 // Bind the DirectionsRenderer to the map
 directionsDisplay.setMap(map);
-var sedano;
-var sedanr;
-var suvo; 
-var suvr;
+
 
 // Define calcRoute function
 function calcRoute() {
