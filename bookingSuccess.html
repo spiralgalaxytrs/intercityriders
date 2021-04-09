@@ -139,7 +139,8 @@ background: linear-gradient(to right, #08AEEA 0%, #2AF598 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 font-weight: 900;
-font-family: 'Poppins', sans-serif;">Booking Success!</h2>  
+font-family: 'Poppins', sans-serif;">Booking Success!</h2>
+                        <h2 id="list">list</h2>
                     <div class="text-content">
      <br>
      <br>
@@ -295,28 +296,10 @@ font-family: 'Poppins', sans-serif;">Booking Success!</h2>
         <!--div class="vehicle-multi-border yellow-black"></div><!-- /.vehicle-multi-border -->
     </div><!-- /.container -->
 
-<script>
- 
-    var strText = document.getElementById("name").value;
-    var strText1 = document.getElementById("p").value;
-    var strText2 = document.getElementById("location-1").value;
-    var strText3 = document.getElementById("location-2").value;
-    var strText4 = document.getElementById("pickupdate").value;
-    var strText6 = document.getElementById("pickuptime").value;
-    var strText7 = document.getElementById("cars").value;
-    var strText8 = document.getElementById("ser").value;
-    var rate;
-    if((strText7=="Sedan") && (strText8=="One-Way"))
-    {rate=sedano;}
-    else if((strText7=="Sedan") && (strText8="Round"))
-    {rate=sedanr;}
-    else if((strText7=="SUV") && (strText8=="One-Way"))
-    {rate=suvo;}
-    else if((strText7=="SUV") && (strText8=="Round"))
-    {rate=suvr;}
-    else if(strText7=="Traveller")
-    {rate=traveller;}
-    document.getElementById("rate").innerHTML=rate;
+    <script>
+    console.log(localStorage.getItem("result"));
+    document.getElementById("list").innerHTML =result;
+    localStorage.removeItem("result");
     </script>   
        
     <!-- All The JS Files
