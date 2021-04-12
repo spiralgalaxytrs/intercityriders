@@ -48,6 +48,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
 			if(response.status==200){
 				console.log("red");
 				localStorage.setItem("result", rate);
+				localStorage.setItem("result1", strText7);
 				window.location.href = "bookingSuccess.html";
 			}
 		})    			
