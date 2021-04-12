@@ -145,7 +145,7 @@ var suvr;
 // Define calcRoute function
 function calcRoute() {
      var y = document.getElementById("ma");
-        y.style.display = "block";
+        y.style.display = "none";
      var z = document.getElementById("ma1");
         z.style.display = "block";
     //create request
