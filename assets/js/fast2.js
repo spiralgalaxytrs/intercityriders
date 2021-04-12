@@ -2,7 +2,7 @@ var sedano;
 var sedanr;
 var suvo; 
 var suvr;
- var rate;
+
 function testVariable() {
 	
     var strText = document.getElementById("name").value;
@@ -17,7 +17,7 @@ function testVariable() {
 	var Clink="https://intercityriders.com";
 	var CPh="9944942223";
 	var Cname="intercityriders";
-	calcRoute()
+	//calcRoute()
     if((strText7=="Sedan") && (strText8=="One-Way"))
     {rate=sedano;}
     else if((strText7=="Sedan") && (strText8="Round"))
@@ -184,7 +184,7 @@ function calcRoute() {
             document.getElementById("output1").style.display = "block";
             //display route <span> Price  :  ₹13 / Km.</span>
             directionsDisplay.setDirections(result);
-            
+            testVariable();
 
 
 
