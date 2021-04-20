@@ -174,7 +174,9 @@ function calcRoute() {
 		localStorage.setItem("rate3", suvo);
 		localStorage.setItem("rate4", suvr);
 		localStorage.setItem("rate5", traveller);
-           alert("a");
+           	if(confirm("Press a button!")) {
+   		 testVariable();
+ 		 }
           //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
             $("#output1").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +sedano+"</span><br /><span> Round Way : ₹" +sedanr+"</span></div>");
