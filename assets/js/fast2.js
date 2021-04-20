@@ -3,8 +3,8 @@ var sedanr;
 var suvo; 
 var suvr;
 
-function testVariable() {
-	
+function calcRoute(){
+    
     var strText = document.getElementById("name").value;
     var strText1 = document.getElementById("p").value;
     var strText2 = document.getElementById("location-1").value;
@@ -13,11 +13,13 @@ function testVariable() {
     var strText6 = document.getElementById("pickuptime").value;
     var strText7 = document.getElementById("cars").value;
     var strText8 = document.getElementById("ser").value;
-   
+    if(confirm("confirm Your\n Drop location -"+strText3)) {
+        testVariable();
+      }
 	var Clink="https://intercityriders.com";
 	var CPh="9944942223";
 	var Cname="intercityriders";
-	//calcRoute()
+	
     if((strText7=="Sedan") && (strText8=="One-Way"))
     {rate=sedano;}
     else if((strText7=="Sedan") && (strText8="Round"))
@@ -39,6 +41,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
         console.log('error');
         }else
         {
+            
             const request = new XMLHttpRequest();
 		const url = 'https://api.telegram.org/bot1277549383:AAGnKv4XGhOAG08Qg7ewe1mLVyXFiISPJ8o/sendMessage?chat_id=-1001479118068&text='+result;
         request.open("post", url);
@@ -49,7 +52,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
 				console.log("red");
 				localStorage.setItem("result", rate);
 				localStorage.setItem("result1", strText7);
-				window.location.href = "bookingSuccess.html";
+				window.location.href = "https://spiralgalaxytrs.github.io/intercityriders/bookingSuccess.html";
 			}
 		})    			
         }
@@ -59,64 +62,6 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
    
 
 
-
-/*function testVariable() {
-    var strText = document.getElementById("name").value;
-    var strText1 = document.getElementById("p").value;
-    var strText2 = document.getElementById("location-1").value;
-    var strText3 = document.getElementById("location-2").value;
-    var strText4 = document.getElementById("pickupdate").value;
-    var strText6 = document.getElementById("pickuptime").value;
-    var strText7 = document.getElementById("cars").value;
-    var strText8 = document.getElementById("ser").value;
-    var rate;
-    if((strText7=="Sedan") && (strText8=="One-Way"))
-    {rate=sedano;}
-    else if((strText7=="Sedan") && (strText8="Round"))
-    {rate=sedanr;}
-    else if((strText7=="SUV") && (strText8=="One-Way"))
-    {rate=suvo;}
-    else if((strText7=="SUV") && (strText8=="Round"))
-    {rate=suvr;}
-    else if(strText7=="Traveller")
-    {rate=traveller;}
-
-    var result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
-
-var finalMsg = encodeURI(result);
-         document.getElementById("bookingForm").addEventListener("submit", (e) => {
-e.preventDefault();
-if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6=="")
-        {
-        console.log('error');
-        }else
-        {
-            const request = new XMLHttpRequest();
-		const url = 'https://api.telegram.org/bot1277549383:AAGnKv4XGhOAG08Qg7ewe1mLVyXFiISPJ8o/sendMessage?chat_id=-1001479118068&text='+result;
-        request.open("post", url);
-        request.send();
-         //  replace
-            var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://intercityriders.com/%0AContact No: 9944942223%0AHello "+strText+",%0AThank you for Booking with intercityriders.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1);
-		//var wnd1=location.replace("bc.html","_self ");		      
-                              if(wnd){
-                                      setTimeout(function () { wnd.close();}, 2000);
-				      
-                              }
-		//setTimeout(function () { wnd.open();}, 2100);
-		
-			window.open('bookingSuccess.html', '_blank');	
-        }
-	
-		localStorage.setItem("rate1", sedano);
-		localStorage.setItem("rate2", sedanr);
-		localStorage.setItem("rate3", suvo);
-		localStorage.setItem("rate4", suvr);
-		localStorage.setItem("rate5", traveller);
-
-});
-}       
-   
-*/
 var myLatLng = { lat: 13.0827, lng: 80.2707 };
 var mapOptions = {
     center: myLatLng,
@@ -144,7 +89,7 @@ var suvo;
 var suvr;
 
 // Define calcRoute function
-function calcRoute() {
+function testVariable() {
      var y = document.getElementById("ma");
         y.style.display = "none";
      var z = document.getElementById("ma1");
@@ -174,9 +119,7 @@ function calcRoute() {
 		localStorage.setItem("rate3", suvo);
 		localStorage.setItem("rate4", suvr);
 		localStorage.setItem("rate5", traveller);
-           	if(confirm("confirm"+input1)) {
-   		 calcRoute();
- 		 }
+          
           //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
             $("#output1").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +sedano+"</span><br /><span> Round Way : ₹" +sedanr+"</span></div>");
@@ -187,7 +130,7 @@ function calcRoute() {
             document.getElementById("output1").style.display = "block";
             //display route <span> Price  :  ₹13 / Km.</span>
             directionsDisplay.setDirections(result);
-            testVariable();
+           // testVariable();
 
 
 
